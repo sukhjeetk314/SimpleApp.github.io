@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html lang="en">  
+    <head> 
+        <meta charset="UTF-8" />
+        <title>Assignment#4 by Sukhjeet kaur(C0810669)</title> <!--it provides title to this coding-->
+        <link rel="stylesheet" href="style.css">  <!--it is link address of css folder to apply styles from style.css -->
+    </head> 
+        <body onload = Fixdecimals_669()>  <!--function starts loading as soon as page is loaded-->
+      <div id="input"> <!--div tag with id "input" selector through which styles are applied-->
+      <h1>
+        FIX DECIMAL  <!--header caption in h1 tag-->
+      </h1> 
+      
+      <h2 id="result"></h2>  <!--it gives output for entered decimal number in h2 format-->
+     
+       <!-- Used the footer area to add footer content at end-->
+      <footer id="end"> <!--id to apply styles on footer content-->
+        &copy; Copyright 2021. All Rights Reserved by Sukhjeet kaur (c0810669@mylambton.ca)<br>
+         </footer> 
+          </div>
+        
+         <script> //javascript coding
+          function Fixdecimals_669() {   //function which is called when page is loaded
+           let d1_669 = prompt("Enter a number with decimal places") //declared first variable to get decimal number as prompt
+           let d2_669 = prompt("How many decimal places you want")  //declared second variable to get decimal places as prompt
+          
+           //declared variable to fix decimal places  
+           let result_669 = (Math.round((d1_669*Math.pow(10,d2_669))+(d1_669*0.0001))/Math.pow(10,d2_669)).toFixed(d2_669); 
+           document.getElementById("result").innerHTML = d1_669 + " fixed to " + d2_669 + " decimals is " +  result_669; 
+           
+           
+           //conditions to check the entered number is  or not
+           if(result_669 >= '0' && result_669 <= '9')
+             {
+                 alert("You entered a valid number. Check your output below")   //alert message box will be displayed if it is a number
+
+             }
+             else{
+                 alert("Please enter a valid number")}    //alert message box will be displayed if it is not valid number
+        }
+          
+    
+         </script> 
+        </body> 
+  </html>
+ 
